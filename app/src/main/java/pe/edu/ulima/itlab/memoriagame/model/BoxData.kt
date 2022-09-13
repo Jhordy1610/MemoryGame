@@ -1,3 +1,3 @@
 package pe.edu.ulima.itlab.memoriagame.model
 
-data class BoxData(val emoji : Int, var isShown : Boolean)
+data class BoxData(val emoji : Emoji, var isShown : Boolean)

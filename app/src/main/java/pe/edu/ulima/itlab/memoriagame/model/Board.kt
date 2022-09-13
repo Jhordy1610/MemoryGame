@@ -12,7 +12,7 @@ class Board (numRows: Int, numCols: Int) { //cuando no se pone var o val, solo s
 
         for (i in 0..(numRows - 1)) {
             rows[i] = Array<BoxData>(numCols){
-                BoxData(20, false) //se llena cada elemento (tipo BoxData) de cada fila con el valor 20
+                BoxData(Emoji.LION, false) //se llena cada elemento (tipo BoxData) de cada fila con el valor 20
             }
         }
     }
