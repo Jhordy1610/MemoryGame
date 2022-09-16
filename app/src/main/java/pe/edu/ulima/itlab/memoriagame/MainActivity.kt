@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
             val row = arrCoordenadas[0].toInt()
             val col = arrCoordenadas[1].toInt()
 
-            val data = board.getValue(row, col)
+            val data = board.getValue(row, col) //data es un elemento boxdata
             if (data != null) {
                 (view as Button).text = //casteamos a la clase hijo 'button' porque 'view' es un View genérico y todo lo demás se está ocultando
                     String(Character.toChars(data.emoji.emojiValue))

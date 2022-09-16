@@ -12,13 +12,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import pe.edu.ulima.itlab.memoriagame.screen.BoardScreen
 import pe.edu.ulima.itlab.memoriagame.ui.theme.MemoriaGameTheme
 
 class BoardActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Texto()
+            //Texto()
+            BoardScreen()
         }
     }
 }
@@ -27,27 +29,30 @@ class BoardActivity : ComponentActivity() {
 fun Texto() {
     /***
     Row(content = {
-        Text(text = "Hola Android Compose")
-        Text(text = "Hola Android Compose")
+    Text(text = "Hola Android Compose")
+    Text(text = "Hola Android Compose")
     })
-    ***/
+     ***/
     Column(
         modifier = Modifier
             .fillMaxWidth() //la columna ocupa el ancho y alto máximo
             .fillMaxHeight(), //encadenamos el modificador
         horizontalAlignment = Alignment.CenterHorizontally
-    ){
-        Text(text = "Hola Android Compose",
-             modifier = Modifier.weight(1f)
+    ) {
+        Text(
+            modifier = Modifier.weight(1f),
+            text = "Hola Android Compose"
         )
-        Text(text = "Hola Android Compose",
-             modifier = Modifier.weight(1f)
+        Text(
+            text = "Hola Android Compose",
+            modifier = Modifier.weight(1f)
         )
 
         Row(
-            modifier = Modifier.fillMaxWidth() //la fila ocupa todo el ancho
-                .weight(2f)
-        ){
+            modifier = Modifier
+                .fillMaxWidth() //la fila ocupa todo el ancho
+                .weight(1f)
+        ) {
 
             Button(
                 onClick = { /*TODO*/ },
