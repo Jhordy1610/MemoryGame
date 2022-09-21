@@ -16,17 +16,32 @@ val boxOnClick: (Int, Int) -> Unit = { row, col -> //los argumentos de entrada s
     }
 
 @Composable
-fun BoardScreen() {
+fun BoardScreen(
+    numCols: Int,
+    numRows: Int
+) {
+    val board = pe.edu.ulima.itlab.memoriagame.model.Board(
+        numRows = numRows,
+        numCols = numCols
+    )
+
     Column(
         modifier = Modifier.fillMaxSize()
     ) {
         Header()
-        Board(6, 4, boxOnClick)
+        Board(
+            numRows = numRows,
+            numCols = numCols,
+            rowsData = board.rows, //para pasarle un atributo de otra clase
+            boxOnClick
+        )
     }
 }
 
+/***
 @Composable
 @Preview(showBackground = true)
 fun showBoardScreen() {
     BoardScreen()
 }
+***/

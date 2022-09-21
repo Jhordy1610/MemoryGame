@@ -20,7 +20,7 @@ class BoardActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             //Texto()
-            BoardScreen()
+            BoardScreen(4, 6)
         }
     }
 }
