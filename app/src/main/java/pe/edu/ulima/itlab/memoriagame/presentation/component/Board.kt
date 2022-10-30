@@ -3,6 +3,7 @@ package pe.edu.ulima.itlab.memoriagame.presentation.component
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.ui.Modifier
 import pe.edu.ulima.itlab.memoriagame.model.BoxData
 
@@ -10,7 +11,7 @@ import pe.edu.ulima.itlab.memoriagame.model.BoxData
 fun Board(
     numRows: Int,
     numCols: Int,
-    rowsData: Array<Array<BoxData>>, //el atributo 'row' de model/Board viene hasta acá, se almacena del array de array
+    rowsData: Array<Array<MutableState<BoxData>>>, //el atributo 'row' de model/Board viene hasta acá
     boxOnClick: (Int, Int) -> Unit
 ) {
     Column(

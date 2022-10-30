@@ -12,7 +12,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import pe.edu.ulima.itlab.memoriagame.screen.BoardScreen
+import pe.edu.ulima.itlab.memoriagame.component.screen.SettingsScreen
+import pe.edu.ulima.itlab.memoriagame.presentation.screen.BoardScreen
+import pe.edu.ulima.itlab.memoriagame.presentation.screen.MainNavScreen
 import pe.edu.ulima.itlab.memoriagame.ui.theme.MemoriaGameTheme
 
 class BoardActivity : ComponentActivity() {
@@ -20,7 +22,9 @@ class BoardActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             //Texto()
-            BoardScreen(4, 6)
+            //BoardScreen(4, 6)
+            //SettingsScreen()
+            MainNavScreen()
         }
     }
 }

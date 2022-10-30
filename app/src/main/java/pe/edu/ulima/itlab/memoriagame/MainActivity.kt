@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
             val data = board.getValue(row, col) //data es un elemento boxdata
             if (data != null) {
                 (view as Button).text = //casteamos a la clase hijo 'button' porque 'view' es un View genérico y todo lo demás se está ocultando
-                    String(Character.toChars(data.emoji.emojiValue))
+                    String(Character.toChars(data.value.emoji.emojiValue))
             }
 
             Log.i("MainActivity", "Se hizo click: ${viewIdStr}")
